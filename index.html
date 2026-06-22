@@ -4,141 +4,259 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roshan M Maliakkal | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Roshan M Maliakkal</h1>
-        <p class="tagline">AI/ML &amp; Full-Stack Developer | MCA Student, VIT Chennai</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+
+    <!-- ── HEADER / NAV ── -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#" class="logo">Roshan<span class="logo-dot">.</span>M</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="site-nav" id="site-nav">
+                <a href="#about"    class="nav-link">About</a>
+                <a href="#skills"   class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact"  class="nav-link">Contact</a>
+            </nav>
+        </div>
     </header>
 
+    <!-- ── HERO ── -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <p class="hero-eyebrow">Hello, I'm</p>
+            <h1 class="hero-name">Roshan M<br><span class="hero-accent">Maliakkal</span></h1>
+            <p class="hero-tagline">CS Student &amp; Part-time Developer</p>
+            <div class="hero-badges">
+                <span class="badge">MCA at VIT Chennai</span>
+                <span class="badge">🏠 Bengaluru, India</span>
+            </div>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact"  class="btn btn-ghost">Get in Touch</a>
+            </div>
+        </div>
+        <div class="hero-graphic" aria-hidden="true">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="grid-lines"></div>
+        </div>
+    </section>
+
     <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <!-- <img src="images/profile.jpg" alt="Photo of Roshan M Maliakkal" class="profile-pic"> -->
-                <div class="about-text">
-                    <p>
-                        Hello! I'm Roshan M Maliakkal, a Master of Computer Applications (MCA) student
-                        at the School of Computer Science and Engineering (SCOPE), Vellore Institute
-                        of Technology, Chennai. I completed my Bachelor of Computer Applications (BCA)
-                        at St. Joseph's University, Bengaluru.
-                    </p>
-                    <p>
-                        My interests lie in Artificial Intelligence, Machine Learning, Deep Learning,
-                        Computer Vision, and Full-Stack Web Development. I enjoy building complete,
-                        working projects — from training machine learning models to deploying
-                        full-stack applications using the MERN stack.
-                    </p>
-                    <p>
-                        I'm currently working on my dissertation along with coursework projects,
-                        and I'm always exploring new technologies to expand my skill set.
-                    </p>
+
+        <!-- ── ABOUT ── -->
+        <section id="about" class="section">
+            <div class="section-inner">
+                <h2 class="section-title"><span class="section-number">01</span>About Me</h2>
+                <div class="about-layout">
+                    <div class="about-image-wrap">
+                        <img src="images\profile.png" alt="Photo of Roshan M Maliakkal" class="profile-pic">
+                        <div class="profile-glow" aria-hidden="true"></div>
+                    </div>
+                    <div class="about-text">
+                        <p>Hello! I'm Roshan M Maliakkal, an MCA student at the School of Computer Science
+                        and Engineering (SCOPE), Vellore Institute of Technology, Chennai, and a BCA
+                        graduate from St. Joseph's University, Bengaluru.</p>
+                        <p>My interests are Data Analysis, Project Management and Full-Stack Web Development. I enjoy building complete,
+                        working projects — from training models to deploying full-stack applications
+                        with the MERN stack.</p>
+                        <p>I'm currently working on my dissertation and always exploring new technologies
+                        to grow my skill set.</p>
+                        <div class="about-links">
+                            <a href="https://github.com/roshan-m24" target="_blank" rel="noopener noreferrer" class="pill-link">
+                                ↗ GitHub
+                            </a>
+                            <a href="https://linkedin.com/in/roshan-mm" target="_blank" rel="noopener noreferrer" class="pill-link">
+                                ↗ LinkedIn
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>JavaScript</li>
-                        <li>C / C++</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Web Development</h3>
-                    <ul>
-                        <li>HTML5 &amp; CSS3</li>
-                        <li>React.js</li>
-                        <li>Node.js &amp; Express</li>
-                        <li>MongoDB</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>AI / Machine Learning</h3>
-                    <ul>
-                        <li>Scikit-learn</li>
-                        <li>Deep Learning (CNNs)</li>
-                        <li>Data Analysis (Pandas, NumPy)</li>
-                        <li>Computer Vision</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools &amp; Platforms</h3>
-                    <ul>
-                        <li>Git &amp; GitHub</li>
-                        <li>VS Code</li>
-                        <li>Oracle Database</li>
-                        <li>Google Colab</li>
-                    </ul>
+        <!-- ── SKILLS ── -->
+        <section id="skills" class="section section-alt">
+            <div class="section-inner">
+                <h2 class="section-title"><span class="section-number">02</span>Skills</h2>
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">⌨</div>
+                        <h3>Programming</h3>
+                        <ul>
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>C / C++</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">🌐</div>
+                        <h3>Web Development</h3>
+                        <ul>
+                            <li>HTML5 &amp; CSS3+Tailwind</li>
+                            <li>React.js</li>
+                            <li>Node.js &amp; Express</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">🧠</div>
+                        <h3>Technical</h3>
+                        <ul>
+                            <li>Data Analysis with AI</li>
+                            <li>Web Dev with Claude Code</li>
+                            <li>LLM Concepts</li>
+                            <li>AI Fundamentals</li>
+                            <li>Analytical Thinking</li>
+                            <li>Data Visualization</li>
+                            <li>Problem-Solving</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">🛠</div>
+                        <h3>Tools &amp; Platforms</h3>
+                        <ul>
+                            <li>GitHub+Copilot</li>
+                            <li>VS Code</li>
+                            <li>Excel</li>
+                            <li>Power BI</li>
+                            <li>Google Colab</li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <section id="projects">
-            <h2>My Projects</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <!-- <img src="images/project-emotion.jpg" alt="Screenshot of the Facial Emotion Recognition project interface"> -->
-                    <h3>Facial Emotion Recognition</h3>
-                    <p>An attention-enhanced deep learning model for recognizing facial emotions, built and trained using the FER2013 dataset.</p>
-                </article>
-                <article class="project-card">
-                    <!-- <img src="images/project-sleep.jpg" alt="Screenshot of the Sleep Quality Predictor application"> -->
-                    <h3>Sleep Quality Predictor</h3>
-                    <p>A full-stack application using JavaFX, Java Servlets, and a Python scikit-learn model to predict sleep quality.</p>
-                </article>
-                <article class="project-card">
-                    <!-- <img src="images/project-wifi.jpg" alt="Screenshot of the Evil Twin WiFi detection system dashboard"> -->
-                    <h3>Rogue WiFi Detection System</h3>
-                    <p>A web-based system for detecting Evil Twin WiFi networks using multi-parameter risk analysis.</p>
-                </article>
+        <!-- ── PROJECTS ── -->
+        <section id="projects" class="section">
+            <div class="section-inner">
+                <h2 class="section-title"><span class="section-number">03</span>Featured Projects</h2>
+                <div class="projects-grid">
+
+                    <article class="project-card">
+                        <div class="project-img-wrap">
+                            <img src="images/project-mern.jpg" alt="Screenshot of the Facial Emotion Recognition project interface">
+                            <div class="project-overlay">
+                            <span class="project-tag">MERN Full-Stack</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3>Academic Resource Management (Question Paper Generator)</h3>
+                            <p>A web-based application that allows educators to create, manage, and generate question papers dynamically. It enables users to input questions, categorize them based on subjects, and generate question papers in an organized manner.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-img-wrap">
+                            <img src="images/project-sleep.jpg" alt="Screenshot of the Sleep Quality Predictor application">
+                            <div class="project-overlay">
+                                <span class="project-tag">Java-JavaFX Application</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3>Sleep Quality Predictor</h3>
+                            <p>JavaFX + Servlets frontend connected to a Python scikit-learn Decision Tree model via Oracle DB.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-img-wrap">
+                            <img src="images/salesanalysis.png" alt="Screenshot of the Evil Twin WiFi detection system dashboard">
+                            <div class="project-overlay">
+                                <span class="project-tag">Data Analysis</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3>Inventory Sales Performance Analysis</h3>
+                            <p>A detailed visual analysis of inventory sales performance datasets to identify and predict sales, revenue, and employee attendance metrics using Power BI, Excel and SQL.</p>
+                        </div>
+                    </article>
+
+                </div>
+                <p class="more-projects">
+                    More work on <a href="https://github.com/roshan-m24" target="_blank" rel="noopener noreferrer">github.com/roshan-m24 ↗</a>
+                </p>
             </div>
-            <p class="more-projects">
-                See more on my <a href="https://github.com/roshan-m24" target="_blank" rel="noopener noreferrer">GitHub profile</a>.
-            </p>
         </section>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out using the form below or connect via the links provided.</p>
-            <form action="#" method="POST" class="contact-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your full name" required minlength="2">
+        <!-- ── CONTACT ── -->
+        <section id="contact" class="section section-alt">
+            <div class="section-inner contact-inner">
+                <h2 class="section-title"><span class="section-number">04</span>Contact Me</h2>
+                <p class="contact-intro">Have an opportunity, collaboration, or question? I'd love to hear from you.</p>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required minlength="2">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your message..." required minlength="10"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message 📩</button>
+                </form>
 
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="Subject" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Your message..." required minlength="10"></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-
-            <div class="social-links">
-                <a href="https://github.com/roshan-m24" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="mailto:roshan.example@email.com">Email</a>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <div class="social-links">
+                    <a href="https://github.com/roshan-m24"          target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+                    <a href="mailto:roshanmaliakkal@gmail.com"                                                 class="social-link">Email</a>
+                    <a href="https://linkedin.com/in/roshan-mm"       target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+                </div>
             </div>
         </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 Roshan M Maliakkal. All rights reserved.</p>
+    <footer class="site-footer">
+        <p>&copy; 2026 Roshan M Maliakkal. Built with HTML &amp; CSS.</p>
     </footer>
+
+    <script>
+        // Mobile nav toggle
+        const toggle = document.querySelector('.nav-toggle');
+        const nav    = document.getElementById('site-nav');
+        toggle.addEventListener('click', () => {
+            const open = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', !open);
+            nav.classList.toggle('is-open');
+        });
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const links    = document.querySelectorAll('.nav-link');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    links.forEach(l => l.classList.remove('active'));
+                    const active = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+                    if (active) active.classList.add('active');
+                }
+            });
+        }, { threshold: 0.4 });
+        sections.forEach(s => observer.observe(s));
+    </script>
+
 </body>
 </html>
