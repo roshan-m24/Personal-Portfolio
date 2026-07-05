@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +14,16 @@
     <!-- ── HEADER / NAV ── -->
     <header class="site-header">
         <div class="header-inner">
-            <a href="#" class="logo">Roshan<span class="logo-dot">.</span>M</a>
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
+            <a href="#" class="logo">Roshan<span class="logo-dot"> </span>M</a>
+            <div class="header-controls">
+                <!-- Dark/Light mode toggle (Feature 1) -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle colour theme" title="Toggle light/dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
             <nav class="site-nav" id="site-nav">
                 <a href="#about"    class="nav-link">About</a>
                 <a href="#skills"   class="nav-link">Skills</a>
@@ -31,11 +37,14 @@
     <section class="hero" id="hero">
         <div class="hero-content">
             <p class="hero-eyebrow">Hello, I'm</p>
-            <h1 class="hero-name">Roshan M<br><span class="hero-accent">Maliakkal</span></h1>
-            <p class="hero-tagline">CS Student &amp; Part-time Developer</p>
+            <h1 class="hero-name">Roshan<br><span class="hero-accent">Maliakkal</span></h1>
+            <!-- Typing animation target (Feature 2) -->
+            <p class="hero-tagline">
+                <span id="typingText"></span><span class="typing-cursor" aria-hidden="true">|</span>
+            </p>
             <div class="hero-badges">
-                <span class="badge">MCA at VIT Chennai</span>
-                <span class="badge">🏠 Bengaluru, India</span>
+                <span class="badge">📚 MCA @ VIT Chennai</span>
+                <span class="badge">🏡📍 Bengaluru, India</span>
             </div>
             <div class="hero-actions">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -57,25 +66,19 @@
                 <h2 class="section-title"><span class="section-number">01</span>About Me</h2>
                 <div class="about-layout">
                     <div class="about-image-wrap">
-                        <img src="images\profile.png" alt="Photo of Roshan M Maliakkal" class="profile-pic">
+                        <img src=".\images\profile.png" alt="Roshan's recent profile photo" class="profile-pic">
                         <div class="profile-glow" aria-hidden="true"></div>
                     </div>
                     <div class="about-text">
-                        <p>Hello! I'm Roshan M Maliakkal, an MCA student at the School of Computer Science
-                        and Engineering (SCOPE), Vellore Institute of Technology, Chennai, and a BCA
+                        <p>Hello! I'm Roshan Maliakkal, an MCA student at Vellore Institute of Technology, Chennai, and a BCA
                         graduate from St. Joseph's University, Bengaluru.</p>
-                        <p>My interests are Data Analysis, Project Management and Full-Stack Web Development. I enjoy building complete,
-                        working projects — from training models to deploying full-stack applications
+                        <p>My interests span Data Analysis, Project Management and Full-Stack Web Development. I enjoy building complete,
+                        real-time projects — from visualisations to deploying full-stack applications
                         with the MERN stack.</p>
-                        <p>I'm currently working on my dissertation and always exploring new technologies
-                        to grow my skill set.</p>
+                        <p>I'm currently working on my dissertation and also always open for new opportunities.</p>
                         <div class="about-links">
-                            <a href="https://github.com/roshan-m24" target="_blank" rel="noopener noreferrer" class="pill-link">
-                                ↗ GitHub
-                            </a>
-                            <a href="https://linkedin.com/in/roshan-mm" target="_blank" rel="noopener noreferrer" class="pill-link">
-                                ↗ LinkedIn
-                            </a>
+                            <a href="https://github.com/roshan-m24" target="_blank" rel="noopener noreferrer" class="pill-link">↗ GitHub</a>
+                            <a href="https://linkedin.com/in/roshan-mm" target="_blank" rel="noopener noreferrer" class="pill-link">↗ LinkedIn</a>
                         </div>
                     </div>
                 </div>
@@ -83,6 +86,7 @@
         </section>
 
         <!-- ── SKILLS ── -->
+        <!-- Skill bars animate on scroll (Feature 3) -->
         <section id="skills" class="section section-alt">
             <div class="section-inner">
                 <h2 class="section-title"><span class="section-number">02</span>Skills</h2>
@@ -90,29 +94,28 @@
 
                     <div class="skill-card">
                         <div class="skill-icon" aria-hidden="true">⌨</div>
-                        <h3>Programming</h3>
+                        <h3>Programming Knowledge</h3>
                         <ul>
                             <li>Java</li>
                             <li>Python</li>
-                            <li>JavaScript</li>
                             <li>C / C++</li>
                         </ul>
                     </div>
 
                     <div class="skill-card">
                         <div class="skill-icon" aria-hidden="true">🌐</div>
-                        <h3>Web Development</h3>
+                        <h3>MERN Stack Web Development</h3>
                         <ul>
-                            <li>HTML5 &amp; CSS3+Tailwind</li>
+                            <li>HTML5 &amp; CSS3</li>
                             <li>React.js</li>
                             <li>Node.js &amp; Express</li>
-                            <li>MongoDB</li>
+                            <li>MongoDB with SQL</li>
                         </ul>
                     </div>
 
                     <div class="skill-card">
                         <div class="skill-icon" aria-hidden="true">🧠</div>
-                        <h3>Technical</h3>
+                        <h3>Technical Skills</h3>
                         <ul>
                             <li>Data Analysis with AI</li>
                             <li>Web Dev with Claude Code</li>
@@ -128,29 +131,76 @@
                         <div class="skill-icon" aria-hidden="true">🛠</div>
                         <h3>Tools &amp; Platforms</h3>
                         <ul>
-                            <li>GitHub+Copilot</li>
+                            <li>GitHub</li>
                             <li>VS Code</li>
-                            <li>Excel</li>
-                            <li>Power BI</li>
-                            <li>Google Colab</li>
+                            <li>Power BI &amp; Tableau</li>
+                            <li>MS Excel / Office 365</li>
+                            <li>Google Colab &amp; Jupyter Notebook</li>
                         </ul>
                     </div>
 
+                </div>
+
+                <!-- Animated skill bars -->
+                <div class="skill-bars" id="skillBars" aria-label="Skill proficiency levels">
+                    <div class="skill-bar-item" data-level="85">
+                        <span class="skill-bar-label">Programming</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span class="skill-bar-pct">85%</span>
+                    </div>
+                    <div class="skill-bar-item" data-level="90">
+                        <span class="skill-bar-label">Full Stack Development</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span class="skill-bar-pct">90%</span>
+                    </div>
+                    <div class="skill-bar-item" data-level="85">
+                        <span class="skill-bar-label">Technical Knowledge and Proficiency</span>
+                        <div class="skill-bar-track">
+                            <div class="skill-bar-fill" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span class="skill-bar-pct">85%</span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- ── PROJECTS ── -->
+        <!-- Filter buttons (Feature 4) -->
         <section id="projects" class="section">
             <div class="section-inner">
                 <h2 class="section-title"><span class="section-number">03</span>Featured Projects</h2>
-                <div class="projects-grid">
 
-                    <article class="project-card">
+                <div class="filter-bar" role="group" aria-label="Filter projects by category">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="Data Analysis">Data Analysis</button>
+                    <button class="filter-btn" data-filter="Full Stack Web Dev">Full Stack Web Dev</button>
+                    <button class="filter-btn" data-filter="JavaFX · ML">Java Project</button>
+                </div>
+
+                <div class="projects-grid" id="projectsGrid">
+
+                    <article class="project-card" data-category="Data Analysis">
                         <div class="project-img-wrap">
-                            <img src="images/project-mern.jpg" alt="Screenshot of the Facial Emotion Recognition project interface">
+                            <img src="images/salesanalysis.png" alt="Screenshot of the Sales Analysis dashboard">
                             <div class="project-overlay">
-                            <span class="project-tag">MERN Full-Stack</span>
+                                <span class="project-tag">Data Analysis</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3>Sales Performance Data Analysis</h3>
+                            <p>A detailed visual analysis of inventory sales performance datasets to identify and predict sales, revenue, and employee attendance metrics using Power BI, Excel and SQL.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="Full Stack Web Dev">
+                        <div class="project-img-wrap">
+                            <img src=".\images\project-mern.jpg" alt="Screenshot of the MERN Stack Project">
+                            <div class="project-overlay">
+                                <span class="project-tag">Full-Stack Dev</span>
                             </div>
                         </div>
                         <div class="project-body">
@@ -159,11 +209,11 @@
                         </div>
                     </article>
 
-                    <article class="project-card">
+                    <article class="project-card" data-category="JavaFX · ML">
                         <div class="project-img-wrap">
-                            <img src="images/project-sleep.jpg" alt="Screenshot of the Sleep Quality Predictor application">
+                            <img src="images/project-sleep.jpg" alt="Screenshot of the Sleep Quality Predictor application using Java">
                             <div class="project-overlay">
-                                <span class="project-tag">Java-JavaFX Application</span>
+                                <span class="project-tag">Java · ML</span>
                             </div>
                         </div>
                         <div class="project-body">
@@ -172,23 +222,8 @@
                         </div>
                     </article>
 
-                    <article class="project-card">
-                        <div class="project-img-wrap">
-                            <img src="images/salesanalysis.png" alt="Screenshot of the Evil Twin WiFi detection system dashboard">
-                            <div class="project-overlay">
-                                <span class="project-tag">Data Analysis</span>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <h3>Inventory Sales Performance Analysis</h3>
-                            <p>A detailed visual analysis of inventory sales performance datasets to identify and predict sales, revenue, and employee attendance metrics using Power BI, Excel and SQL.</p>
-                        </div>
-                    </article>
-
                 </div>
-                <p class="more-projects">
-                    More work on <a href="https://github.com/roshan-m24" target="_blank" rel="noopener noreferrer">github.com/roshan-m24 ↗</a>
-                </p>
+                <p class="more-projects">More work on <a href="https://github.com/roshan-m24" target="_blank" rel="noopener noreferrer">github.com/roshan-m24 ↗</a></p>
             </div>
         </section>
 
@@ -196,34 +231,46 @@
         <section id="contact" class="section section-alt">
             <div class="section-inner contact-inner">
                 <h2 class="section-title"><span class="section-number">04</span>Contact Me</h2>
-                <p class="contact-intro">Have an opportunity, collaboration, or question? I'd love to hear from you.</p>
+                <p class="contact-intro">Have an opportunity, collaboration, or question? Feel free to connect.</p>
 
-                <form action="#" method="POST" class="contact-form">
+                <!-- Toast notification (Feature 5 output) -->
+                <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+                <!-- Form validation (Feature 5) -->
+                <form action="#" method="POST" class="contact-form" id="contactForm" novalidate>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your full name" required minlength="2">
+                            <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name">
+                            <span class="field-error" id="nameError" aria-live="polite"></span>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+                            <span class="field-error" id="emailError" aria-live="polite"></span>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                        <span class="field-error" id="subjectError" aria-live="polite"></span>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Your message..." required minlength="10"></textarea>
+                        <label for="message">
+                            Message
+                            <!-- Character counter (Feature 6) -->
+                            <span class="char-counter" id="charCounter">0 / 500</span>
+                        </label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your message..." maxlength="500"></textarea>
+                        <span class="field-error" id="messageError" aria-live="polite"></span>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-full">Send Message 📩</button>
+                    <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Send Message 📩</button>
                 </form>
 
                 <div class="social-links">
-                    <a href="https://github.com/roshan-m24"          target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
-                    <a href="mailto:roshanmaliakkal@gmail.com"                                                 class="social-link">Email</a>
-                    <a href="https://linkedin.com/in/roshan-mm"       target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+                    <a href="https://github.com/roshan-m24"    target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+                    <a href="mailto:roshanmaliakkal@gmail.com"                                            class="social-link">Email</a>
+                    <a href="https://linkedin.com/in/roshan-mm" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
                 </div>
             </div>
         </section>
@@ -231,32 +278,12 @@
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2026 Roshan M Maliakkal. Built with HTML &amp; CSS.</p>
+        <p>&copy; <span id="footerYear"></span> Roshan Maliakkal. Built with 🤖</p>
     </footer>
 
-    <script>
-        // Mobile nav toggle
-        const toggle = document.querySelector('.nav-toggle');
-        const nav    = document.getElementById('site-nav');
-        toggle.addEventListener('click', () => {
-            const open = toggle.getAttribute('aria-expanded') === 'true';
-            toggle.setAttribute('aria-expanded', !open);
-            nav.classList.toggle('is-open');
-        });
-        // Active nav link on scroll
-        const sections = document.querySelectorAll('section[id]');
-        const links    = document.querySelectorAll('.nav-link');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    links.forEach(l => l.classList.remove('active'));
-                    const active = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
-                    if (active) active.classList.add('active');
-                }
-            });
-        }, { threshold: 0.4 });
-        sections.forEach(s => observer.observe(s));
-    </script>
+    <!-- Scroll-to-top button (Feature 7) -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Back to top">▲</button>
 
+    <script src="script.js"></script>
 </body>
 </html>
