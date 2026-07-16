@@ -129,7 +129,7 @@ function clearFormErrors(form) {
   const roles = [
     'Aspiring Computer Science Graduate',
     'Experience in Software Development',
-    'Strong interest in Data Analysis',
+    'Strong interest in AI & Data Analytics',
     'MCA Student @ VIT Chennai',
   ];
 
