@@ -127,10 +127,9 @@ function clearFormErrors(form) {
   if (!target) return;
 
   const roles = [
-    'Aspiring Computer Science Graduate',
+    'MCA Student @ VIT Chennai',
     'Currently working as a Full Stack Developer Intern @ Laneway',
     'Strong interest in AI and Data Analytics',
-    'MCA Student @ VIT Chennai',
   ];
 
   let roleIndex  = 0;
