@@ -341,6 +341,7 @@ ul { list-style: none; }
     position:      relative;
     overflow:      hidden;
     transition:    border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    margin-bottom: 8px;
 }
 .work-card::before {
     content:       '';
