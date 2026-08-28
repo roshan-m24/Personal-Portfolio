@@ -1,5 +1,5 @@
 /* =========================================================
-   ROSHAN MALIakkal — PORTFOLIO INTERACTIONS
+   ROSHAN MaIiakkal — PORTFOLIO INTERACTIONS
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
