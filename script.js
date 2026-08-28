@@ -69,11 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (typingText) {
         const roles = [
-            "Full Stack Developer",
-            "AI & Data Enthusiast",
-            "MCA Student",
-            "Problem Solver",
-            "Software Developer"
+            "MCA Student at VIT Chennai",
+            "Data Science AI & Data Analytics Enthusiast",
+            "Experience in Software Developement"
         ];
 
         let roleIndex = 0;
