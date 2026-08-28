@@ -718,6 +718,11 @@ ul { list-style: none; }
         linear-gradient(90deg, rgba(79,70,229,0.06) 1px, transparent 1px);
 }
 
+/* Work experience dates - Light mode */
+[data-theme="light"] .work-date {
+    color: #111827 !important;
+}
+
 /* ═══════════════════════════════════════════════════
    THEME TOGGLE BUTTON
 ═══════════════════════════════════════════════════ */
